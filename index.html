@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go Green Nepal | Sustainable Organic Solutions</title>
+    <meta name="description" content="Harnessing Nepal's soil for organic solutions. Healthy Soil, Healthy Food, Healthy Water." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favico.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- ✅ FIXED: Removed stray </style> tag that had no opening <style> -->
+  </head>
+
+  <body
+    class="bg-slate-50 dark:bg-gray-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-500 overflow-x-hidden"
+  >
+    <!-- ══════════════════════════════════════ NAVBAR ══════════════════════════════════════ -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
+      <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="glass rounded-2xl shadow-xl px-6 py-2 flex items-center justify-between border border-white/20 dark:border-emerald-500/20">
+          <a href="#" class="flex items-center group">
+            <img src="logo.svg" alt="GoGreen Nepal logo" class="h-12 w-auto" />
+          </a>
+
+          <div class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">
+            <a href="#pillars" class="hover:text-emerald-600 transition-colors">Mission</a>
+            <a href="#ceo" class="hover:text-emerald-600 transition-colors">About</a>
+            <a href="#product" class="hover:text-emerald-600 transition-colors">Innovation</a>
+            <a href="#contact" class="hover:text-emerald-600 transition-colors">Contact</a>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <button id="themeBtn" aria-label="Toggle dark mode" class="p-2 rounded-xl bg-slate-100 dark:bg-gray-800 text-emerald-600 transition-all hover:scale-110">
+              <i id="themeIcon" class="fa-solid fa-sun text-lg"></i>
+            </button>
+            <a href="#contact" class="btn-hover-effect hidden sm:block bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-emerald-500/30 transition-all active:scale-95">
+              Get Started
+            </a>
+            <button id="menuBtn" aria-label="Toggle mobile menu" class="md:hidden text-2xl text-emerald-600"><i class="fa-solid fa-bars-staggered"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden absolute top-full left-4 right-4 mt-2 glass rounded-2xl p-6 shadow-2xl flex flex-col gap-4 border border-white/20 animate-fade-in">
+        <a href="#pillars" class="text-lg font-medium border-b border-emerald-500/10 pb-2">Our Mission</a>
+        <a href="#ceo" class="text-lg font-medium border-b border-emerald-500/10 pb-2">About</a>
+        <a href="#product" class="text-lg font-medium border-b border-emerald-500/10 pb-2">Products</a>
+        <a href="#contact" class="bg-emerald-600 text-white text-center py-3 rounded-xl">Get Started</a>
+      </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════ HERO — SPLIT SCREEN ══════════════════════════════════════ -->
+    <section
+      class="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16 px-6 md:px-16"
+    >
+      <!-- Background blobs -->
+      <div
+        class="hero-blob w-96 h-96 bg-emerald-400 top-10 -left-20"
+      ></div>
+      <div
+        class="hero-blob w-72 h-72 bg-teal-300 bottom-20 right-10"
+        style="animation-delay: 2s"
+      ></div>
+      <div
+        class="hero-blob w-56 h-56 bg-lime-300 top-1/2 left-1/2"
+        style="animation-delay: 4s"
+      ></div>
+
+      <div
+        class="relative z-10 max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center gap-12"
+      >
+        <!-- ✅ FIXED: Removed stray "text" node that was here -->
+
+        <!-- Left: Copy -->
+        <div class="flex-1 text-center md:text-left">
+          <span
+            class="inline-block bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 reveal"
+          >
+            🌿 Sustainable Future, Rooted in Nepal
+          </span>
+
+          <h1
+            class="font-serif font-black text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 reveal"
+          >
+            <span class="grad-text">Healthy soil <br/> Healthy water</span><br />
+            <span class="text-slate-800 dark:text-white">Healthy food</span>
+          </h1>
+
+          <p
+            class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed max-w-md mx-auto md:mx-0 mb-10 reveal"
+          >
+            GoGreen Nepal is on a mission to restore the health of Nepal's soil, water, and food systems through sustainable organic solutions. We work hand-in-hand with local farmers to cultivate a greener, healthier future for all.</p>
+
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start reveal"
+          >
+            <a
+              href="#pillars"
+              class="btn-hover-effect inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3.5 rounded-full shadow-xl hover:shadow-emerald-400/40 transition-all duration-300 active:scale-95"
+            >
+              Explore Mission <i class="fa-solid fa-seedling"></i>
+            </a>
+            <a
+              href="#product"
+              class="btn-hover-effect inline-flex items-center justify-center gap-2 border-2 border-emerald-500 text-emerald-700 dark:text-emerald-300 font-semibold px-8 py-3.5 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-900/40 transition-all duration-300"
+            >
+              Our Products <i class="fa-solid fa-flask"></i>
+            </a>
+          </div>
+
+          <!-- Stats strip -->
+          <div
+            class="flex gap-8 mt-12 justify-center md:justify-start reveal"
+          >
+            <div>
+              <p class="font-serif text-3xl font-bold text-emerald-600">7+</p>
+              <p
+                class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wide"
+              >
+                Years of Research
+              </p>
+            </div>
+            <div class="w-px bg-slate-200 dark:bg-slate-700"></div>
+            <div>
+              <p class="font-serif text-3xl font-bold text-emerald-600">12</p>
+              <p
+                class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wide"
+              >
+                Districts Reached
+              </p>
+            </div>
+            <div class="w-px bg-slate-200 dark:bg-slate-700"></div>
+            <div>
+              <p class="font-serif text-3xl font-bold text-emerald-600">
+                100%
+              </p>
+              <p
+                class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wide"
+              >
+                Organic
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Floating visual -->
+        <div class="flex-1 flex items-center justify-center reveal">
+          <div class="relative w-full max-w-xl">
+            <div class="relative overflow-hidden rounded-[2.5rem] shadow-[0_40px_80px_rgba(4,120,87,0.18)]">
+              <img src="Organic.jpg" alt="Organic farming in Nepal" class="w-full h-[520px] object-cover sm:h-[560px]" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+              <div class="absolute bottom-8 left-8 right-8 text-white">
+                <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500/90 px-4 py-2 text-xs font-semibold uppercase tracking-widest shadow-lg">
+                  <i class="fa-solid fa-seedling"></i>
+                  Organic Farming
+                </span>
+                <h3 class="mt-4 font-serif text-3xl md:text-4xl font-bold leading-tight">
+                  Nepal's natural growth in action
+                </h3>
+                <p class="mt-3 max-w-md text-sm text-emerald-100/90">
+                  A glimpse of our sustainable crop solutions, grown with care for people and planet.
+                </p>
+              </div>
+            </div>
+
+            <div class="absolute -right-8 top-10 w-40 h-56 rounded-[2rem] overflow-hidden border-4 border-white/80 shadow-2xl hidden md:block">
+              <img src="LXNSxTKXh279Lmg7pnNvUn.jpg" alt="GoGreen team" class="w-full h-full object-cover" />
+            </div>
+
+            <div class="absolute -bottom-8 left-6 w-24 h-24 rounded-full bg-emerald-500/90 border-4 border-white shadow-2xl flex items-center justify-center text-white text-2xl">
+              <i class="fa-solid fa-earth-asia"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ THREE PILLARS — BENTO GRID ══════════════════════════════════════ -->
+    <section
+      id="pillars"
+      class="py-24 px-6 md:px-16 bg-white dark:bg-gray-900 transition-colors duration-500"
+    >
+      <div class="max-w-6xl mx-auto">
+        <!-- ✅ FIXED: Removed stray "text" node that was here -->
+
+        <div class="text-center mb-16 reveal">
+          <span
+            class="inline-block text-emerald-500 text-xs font-semibold tracking-widest uppercase mb-3"
+            >Our Three Pillars</span
+          >
+          <h2
+            class="font-serif text-4xl md:text-5xl font-bold text-slate-800 dark:text-white"
+          >
+            The Foundation of
+            <span class="grad-text">Green Living</span>
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 mt-4 max-w-xl mx-auto">
+            Every thriving ecosystem rests on three essentials. We protect and
+            restore all three.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="reveal group glass rounded-3xl p-8 shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default border border-emerald-100 dark:border-emerald-900/50 bg-gradient-to-br from-amber-50 to-emerald-50 dark:from-emerald-950/60 dark:to-gray-900/80"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fa-solid fa-mountain-sun text-amber-600 text-2xl"></i>
+            </div>
+            <h3
+              class="font-serif text-2xl font-bold text-slate-800 dark:text-white mb-3"
+            >
+              Healthy Soil
+            </h3>
+            <p
+              class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm"
+            >
+              Restoring Nepal's soil microbiome through bio-compost and
+              mycorrhizal inoculants, turning degraded land into thriving,
+              fertile ground.
+            </p>
+            <div
+              class="mt-6 flex items-center gap-2 text-amber-600 dark:text-amber-400 text-sm font-semibold group-hover:gap-3 transition-all duration-300"
+            >
+              Learn more <i class="fa-solid fa-arrow-right text-xs"></i>
+            </div>
+          </div>
+
+          <!-- Card 2 (Featured) -->
+          <!-- ✅ FIXED: Added "relative" class so the absolute dot renders correctly -->
+          <div
+            class="reveal relative group rounded-3xl p-8 shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default bg-gradient-to-br from-emerald-600 to-emerald-900 border border-emerald-500/30"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fa-solid fa-bowl-food text-white text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white mb-3">
+              Healthy Food
+            </h3>
+            <p class="text-emerald-100 leading-relaxed text-sm">
+              Growing chemical-free, nutrient-dense produce that feeds families
+              with integrity — from seed selection to harvest, every step is
+              traceable.
+            </p>
+            <div
+              class="mt-6 flex items-center gap-2 text-emerald-200 text-sm font-semibold group-hover:gap-3 transition-all duration-300"
+            >
+              Learn more <i class="fa-solid fa-arrow-right text-xs"></i>
+            </div>
+            <!-- Decorative dot -->
+            <div
+              class="absolute top-6 right-6 w-3 h-3 rounded-full bg-lime-400 animate-pulse"
+            ></div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="reveal group glass rounded-3xl p-8 shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default border border-blue-100 dark:border-blue-900/40 bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-950/40 dark:to-gray-900/80"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <i class="fa-solid fa-water text-blue-500 text-2xl"></i>
+            </div>
+            <h3
+              class="font-serif text-2xl font-bold text-slate-800 dark:text-white mb-3"
+            >
+              Healthy Water
+            </h3>
+            <p
+              class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm"
+            >
+              Protecting Nepal's glacial watersheds by eliminating chemical
+              runoff and building organic buffer zones around rivers, lakes, and
+              springs.
+            </p>
+            <div
+              class="mt-6 flex items-center gap-2 text-blue-500 dark:text-blue-400 text-sm font-semibold group-hover:gap-3 transition-all duration-300"
+            >
+              Learn more <i class="fa-solid fa-arrow-right text-xs"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ CEO SPOTLIGHT ══════════════════════════════════════ -->
+    <section
+      id="ceo"
+      class="py-24 px-6 md:px-16 bg-slate-50 dark:bg-gray-950 transition-colors duration-500"
+    >
+      <div class="max-w-4xl mx-auto reveal">
+        <div
+          class="rounded-3xl bg-white dark:bg-gray-900 shadow-2xl border-l-4 border-emerald-500 overflow-hidden"
+        >
+          <div class="flex flex-col md:flex-row">
+            <!-- ✅ FIXED: Removed stray "text" node that was here -->
+
+            <!-- Left accent panel -->
+            <div
+              class="md:w-64 bg-gradient-to-br from-emerald-600 to-emerald-900 flex flex-col items-center justify-center p-10 gap-4"
+            >
+              <div
+                class="w-24 h-24 rounded-full overflow-hidden bg-white/20 flex items-center justify-center shadow-xl"
+              >
+                <img src="ceo.png" alt="Baburam Niroula" class="w-full h-full object-cover" />
+              </div>
+              <div class="text-center">
+                 <p
+                  class="text-emerald-200 text-xs uppercase tracking-widest mt-1"
+                >
+                  StartUp Entrepreneur
+                </p>
+                <p class="font-serif text-white font-bold text-lg">
+                  Baburam Niroula
+                </p>
+                <p
+                  class="text-emerald-200 text-xs uppercase tracking-widest mt-1"
+                >
+                  Founder & CEO: GoGreen Nepal
+                </p>
+              </div>
+              <div class="flex gap-3 mt-2">
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                >
+                  <i class="fa-brands fa-linkedin-in text-xs"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                >
+                  <i class="fa-brands fa-twitter text-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Quote -->
+            <div
+              class="flex-1 p-10 md:p-14 flex flex-col justify-center"
+            >
+              <i
+                class="fa-solid fa-quote-left text-emerald-300 dark:text-emerald-800 text-4xl mb-6"
+              ></i>
+              <blockquote
+                class="font-serif text-2xl md:text-3xl font-bold italic text-slate-700 dark:text-slate-200 leading-relaxed mb-6"
+              >
+                "At GoGreen Nepal, our journey began with a simple realization i.e. healthy soil means a healthier future. Seeing the impact of chemical farming in my home district inspired us to work closely with Nepali farmers, promoting sustainable practices that protect both the land and the communities who depend on it."
+              </blockquote>
+              <p class="text-slate-400 dark:text-slate-500 text-sm">
+                Baburam Niroula founded Go Green Nepal after witnessing
+                first-hand how chemical farming was depleting his home
+                district's soil. Today, the company works with over 500
+                smallholder farmers across the Terai and Hills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ PRODUCT TEASER — ORGANIC SHIELD ══════════════════════════════════════ -->
+    <section
+      id="product"
+      class="py-24 px-6 md:px-16 bg-white dark:bg-gray-900 transition-colors duration-500"
+    >
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <span
+            class="inline-block text-emerald-500 text-xs font-semibold tracking-widest uppercase mb-3"
+            >Innovation Lab</span
+          >
+          <h2
+            class="font-serif text-4xl md:text-5xl font-bold text-slate-800 dark:text-white"
+          >
+            Introducing <span class="grad-text">Organic Shield™</span>
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 mt-4 max-w-xl mx-auto">
+            Our flagship bio-protectant prototype, born from Himalayan botanicals
+            and three years of soil science research.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-[1.1fr_0.9fr] items-start">
+          <div class="reveal relative rounded-[2.5rem] overflow-hidden shadow-[0_40px_100px_rgba(4,120,87,0.14)] border border-emerald-100 dark:border-emerald-800 bg-gradient-to-br from-emerald-50 via-white to-slate-100 dark:from-slate-950 dark:via-emerald-950/20 dark:to-slate-900">
+            <div class="absolute -left-16 top-10 w-44 h-44 rounded-full bg-emerald-300/20 blur-3xl"></div>
+            <div class="absolute -right-16 bottom-8 w-52 h-52 rounded-full bg-teal-400/15 blur-3xl"></div>
+            <div class="relative p-8 md:p-10">
+              <span class="inline-flex items-center gap-2 rounded-full bg-emerald-600/10 text-emerald-700 dark:text-emerald-200 px-4 py-2 text-xs font-semibold uppercase tracking-widest shadow-sm">
+                <i class="fa-solid fa-flask"></i>
+                Prototype 1.0
+              </span>
+
+              <div class="mt-10 grid gap-6 md:grid-cols-2">
+                <div class="rounded-[2rem] border border-white/70 bg-white/80 dark:border-white/10 dark:bg-slate-950/70 p-6 shadow-2xl backdrop-blur-xl">
+                  <div class="flex items-center justify-between gap-4">
+                    <div>
+                      <p class="text-slate-900 dark:text-white font-semibold text-xl">Organic Shield™</p>
+                      <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Bio-Protectant Formula</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-3xl bg-emerald-500/10 flex items-center justify-center text-emerald-700 dark:text-emerald-200">
+                      <i class="fa-solid fa-shield-halved text-xl"></i>
+                    </div>
+                  </div>
+                  <p class="mt-4 text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                    A gentle plant guardian that protects harvests and respects soil health.
+                  </p>
+                </div>
+
+                <div class="rounded-[2rem] border border-white/70 bg-emerald-600/10 dark:border-white/10 dark:bg-emerald-500/10 p-6 shadow-2xl backdrop-blur-xl">
+                  <p class="text-emerald-700 dark:text-emerald-200 font-semibold text-xs uppercase tracking-widest mb-2">Featured Benefit</p>
+                  <h3 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">
+                    Soil-safe protection with zero chemical residue.
+                  </h3>
+                </div>
+              </div>
+
+              <div class="mt-10 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-[1.75rem] border border-emerald-100 bg-white/90 dark:border-emerald-900/60 dark:bg-slate-950/80 p-5 shadow-lg">
+                  <p class="text-emerald-600 dark:text-emerald-300 font-semibold text-sm uppercase tracking-wider">Organic</p>
+                  <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm">100% botanical ingredients from Nepal.</p>
+                </div>
+                <div class="rounded-[1.75rem] border border-emerald-100 bg-white/90 dark:border-emerald-900/60 dark:bg-slate-950/80 p-5 shadow-lg">
+                  <p class="text-emerald-600 dark:text-emerald-300 font-semibold text-sm uppercase tracking-wider">Rainproof</p>
+                  <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm">Effective through monsoon cycles for consistent results.</p>
+                </div>
+              </div>
+
+              <div class="mt-10 flex flex-col gap-4">
+                <div class="rounded-[2rem] border border-white/70 bg-white/80 dark:border-white/10 dark:bg-slate-950/70 p-6 shadow-2xl backdrop-blur-xl">
+                  <p class="text-slate-900 dark:text-white font-semibold">Field-ready application</p>
+                  <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">
+                    Developed in partnership with smallholder growers for real-world reliability.
+                  </p>
+                </div>
+                <div class="rounded-[2rem] border border-white/70 bg-emerald-600/10 dark:border-white/10 dark:bg-emerald-500/10 p-6 shadow-2xl backdrop-blur-xl">
+                  <p class="text-emerald-700 dark:text-emerald-200 font-semibold">Clean harvest promise</p>
+                  <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">
+                    Designed to fully break down before produce reaches the consumer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal rounded-[2.5rem] bg-slate-50 dark:bg-gray-950 border border-slate-200 dark:border-gray-800 shadow-2xl p-8 md:p-10">
+            <div class="mb-8">
+              <p class="text-sm uppercase tracking-[0.28em] text-emerald-600 dark:text-emerald-300 font-semibold">
+                Why growers choose us
+              </p>
+              <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Powerful protection built for Nepal’s climate and local soil systems.
+              </p>
+            </div>
+
+            <ul class="space-y-5">
+              <li class="flex gap-4">
+                <span class="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-emerald-600/10 text-emerald-700 dark:text-emerald-200">
+                  <i class="fa-solid fa-check"></i>
+                </span>
+                <div>
+                  <p class="font-semibold text-slate-800 dark:text-white">Broad-Spectrum Protection</p>
+                  <p class="text-slate-500 dark:text-slate-400 text-sm">Guards crops from fungal and bacterial threats without harsh synthetics.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span class="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-emerald-600/10 text-emerald-700 dark:text-emerald-200">
+                  <i class="fa-solid fa-seedling"></i>
+                </span>
+                <div>
+                  <p class="font-semibold text-slate-800 dark:text-white">Soil Microbiome Safe</p>
+                  <p class="text-slate-500 dark:text-slate-400 text-sm">Preserves beneficial soil life while protecting plant health.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span class="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-emerald-600/10 text-emerald-700 dark:text-emerald-200">
+                  <i class="fa-solid fa-droplet"></i>
+                </span>
+                <div>
+                  <p class="font-semibold text-slate-800 dark:text-white">Monsoon Ready</p>
+                  <p class="text-slate-500 dark:text-slate-400 text-sm">Formulated to stay effective even in heavy rain.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span class="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-emerald-600/10 text-emerald-700 dark:text-emerald-200">
+                  <i class="fa-solid fa-leaf"></i>
+                </span>
+                <div>
+                  <p class="font-semibold text-slate-800 dark:text-white">Zero Harvest Residue</p>
+                  <p class="text-slate-500 dark:text-slate-400 text-sm">Breaks down completely before the crop reaches your table.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a
+              href="#contact"
+              class="btn-hover-effect inline-flex items-center justify-center gap-2 mt-10 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-7 py-4 rounded-2xl shadow-lg hover:shadow-emerald-400/30 transition-all duration-300 active:scale-95"
+            >
+              Join the Waitlist
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ CONTACT FORM ══════════════════════════════════════ -->
+    <section
+      id="contact"
+      class="py-24 px-6 md:px-16 bg-slate-50 dark:bg-gray-950 transition-colors duration-500"
+    >
+      <div class="max-w-xl mx-auto reveal">
+        <!-- ✅ FIXED: Removed stray "text" node that was here -->
+
+        <div class="text-center mb-10">
+          <span
+            class="inline-block text-emerald-500 text-xs font-semibold tracking-widest uppercase mb-3"
+            >Get In Touch</span
+          >
+          <h2
+            class="font-serif text-4xl font-bold text-slate-800 dark:text-white"
+          >
+            Let's Grow <span class="grad-text">Together</span>
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 mt-3 text-sm">
+            Whether you're a farmer, investor, or nature lover — we want to hear
+            from you.
+          </p>
+        </div>
+
+        <div class="grid gap-6 mb-10 md:grid-cols-[1.2fr_0.8fr]">
+          <div
+            class="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-8 border border-slate-100 dark:border-gray-800"
+          >
+            <p class="font-semibold text-slate-800 dark:text-white mb-4">
+              Contact details
+            </p>
+            <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+              <div>
+                <p class="font-semibold text-slate-800 dark:text-white">
+                  Phone
+                </p>
+                <a
+                  href="tel:+9779852041909"
+                  class="text-emerald-600 dark:text-emerald-300 hover:underline"
+                  >+977 985-2041909</a
+                >
+              </div>
+              <div>
+                <p class="font-semibold text-slate-800 dark:text-white">
+                  Email
+                </p>
+                <a
+                  href="mailto:gogreennepal26@gmail.com"
+                  class="text-emerald-600 dark:text-emerald-300 hover:underline"
+                  >gogreennepal26@gmail.com</a
+                >
+              </div>
+              <div>
+                <p class="font-semibold text-slate-800 dark:text-white">
+                  Location
+                </p>
+                <p>Biratchwok, Nepal</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="overflow-hidden rounded-3xl border border-slate-200 dark:border-gray-800 shadow-2xl min-h-[280px]"
+          >
+            <iframe
+              src="https://maps.google.com/maps?q=Biratchowk%2C%20Nepal&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              class="w-full h-full min-h-[280px]"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Google map showing Biratchwok, Nepal"
+            >
+            </iframe>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl p-8 md:p-10 border border-slate-100 dark:border-gray-800"
+        >
+          <form id="contact-form" class="space-y-5" novalidate>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <div class="field" style="flex: 1; min-width: 220px;">
+                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1.5">FIRST NAME</label>
+                <input
+                  type="text"
+                  name="first_name"
+                  placeholder="Hari"
+                  required
+                  class="w-full bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-white placeholder-slate-300 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-all duration-200"
+                />
+              </div>
+              <div class="field" style="flex: 1; min-width: 220px;">
+                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1.5">LAST NAME</label>
+                <input
+                  type="text"
+                  name="last_name"
+                  placeholder="Bahadur"
+                  required
+                  class="w-full bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-white placeholder-slate-300 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-all duration-200"
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1.5">EMAIL ADDRESS</label>
+              <input
+                type="email"
+                name="user_email"
+                placeholder="you@example.com"
+                required
+                class="w-full bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-white placeholder-slate-300 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-all duration-200"
+              />
+            </div>
+
+            <div class="field">
+              <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1.5">I AM A...</label>
+              <select
+                name="user_role"
+                required
+                class="w-full bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer"
+              >
+                <option value="" disabled selected>Select your role</option>
+                <option value="Farmer / Grower">Farmer / Grower</option>
+                <option value="Investor / Partner">Investor / Partner</option>
+                <option value="Consumer / Supporter">Consumer / Supporter</option>
+                <option value="Researcher / NGO">Researcher / NGO</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1.5">MESSAGE</label>
+              <textarea
+                name="message"
+                placeholder="Tell us about your vision or question..."
+                rows="4"
+                class="w-full bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-white placeholder-slate-300 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-all duration-200 resize-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              id="button"
+              class="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-98 text-white font-semibold py-3.5 rounded-xl shadow-lg hover:shadow-emerald-400/30 transition-all duration-300 flex items-center justify-center gap-2 text-sm"
+            >
+              <span id="btnText">Send Message</span>
+              <i id="btnIcon" class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <!-- Success message -->
+          <div
+            id="successMsg"
+            class="hidden mt-6 text-center py-4 px-6 bg-emerald-50 dark:bg-emerald-900/30 rounded-2xl border border-emerald-200 dark:border-emerald-800"
+          >
+            <i
+              class="fa-solid fa-circle-check text-emerald-500 text-2xl mb-2 block"
+            ></i>
+            <p
+              class="font-semibold text-emerald-700 dark:text-emerald-300 text-sm"
+            >
+              Message sent! We'll be in touch soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════ FOOTER ══════════════════════════════════════ -->
+    <footer class="bg-emerald-950 text-emerald-100 py-12 px-6 md:px-16">
+      <div class="max-w-6xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start gap-8 mb-10"
+        >
+          <!-- ✅ FIXED: Removed stray "text" node that was here -->
+
+          <div class="max-w-xs">
+            <div class="flex items-center gap-2 mb-4">
+              <span
+                class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center"
+              >
+                <i class="fa-solid fa-leaf text-white text-sm"></i>
+              </span>
+              <span class="font-serif font-bold text-xl text-white"
+                >GoGreen Nepal</span
+              >
+            </div>
+            <p class="text-emerald-300 text-sm leading-relaxed">
+              Growing a greener future for Nepal, one seed at a time. Rooted in
+              soil science, driven by purpose.
+            </p>
+            <div class="mt-4 text-sm text-emerald-200 space-y-2">
+              <p>
+                <span class="font-semibold text-white">Phone:</span>
+                <a href="tel:+9779852041909" class="hover:underline"
+                  >+977 985-2041909</a
+                >
+              </p>
+              <p>
+                <span class="font-semibold text-white">Email:</span>
+                <a
+                  href="mailto:gogreennepal26@gmail.com"
+                  class="hover:underline"
+                  >gogreennepal26@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-16">
+            <div>
+              <p
+                class="font-semibold text-white text-sm uppercase tracking-wider mb-4"
+              >
+                Mission
+              </p>
+              <ul class="space-y-2 text-emerald-300 text-sm">
+                <li>
+                  <a
+                    href="#pillars"
+                    class="hover:text-white transition-colors"
+                    >Healthy Soil</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#pillars"
+                    class="hover:text-white transition-colors"
+                    >Healthy Food</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#pillars"
+                    class="hover:text-white transition-colors"
+                    >Healthy Water</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p
+                class="font-semibold text-white text-sm uppercase tracking-wider mb-4"
+              >
+                Company
+              </p>
+              <ul class="space-y-2 text-emerald-300 text-sm">
+                <li>
+                  <a href="#ceo" class="hover:text-white transition-colors"
+                    >About CEO</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#product"
+                    class="hover:text-white transition-colors"
+                    >Organic Shield</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="hover:text-white transition-colors"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-emerald-900 pt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <div class="flex flex-col sm:flex-row sm:items-center gap-3 text-emerald-500 text-xs">
+            <p>© 2025 Go Green Nepal. All rights reserved.</p>
+            <div class="flex items-center gap-1">
+              <i class="fa-solid fa-map-pin text-emerald-400"></i>
+              Biratchowk, Nepal
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+            <div class="flex items-center gap-3">
+              <a href="https://facebook.com/GoGreenNepal" target="_blank" rel="noreferrer" class="text-emerald-300 hover:text-white transition-colors" aria-label="GoGreen Nepal Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://instagram.com/GoGreenNepal" target="_blank" rel="noreferrer" class="text-emerald-300 hover:text-white transition-colors" aria-label="GoGreen Nepal Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://youtube.com/@GoGreenNepal26" target="_blank" rel="noreferrer" class="text-emerald-300 hover:text-white transition-colors" aria-label="GoGreen Nepal YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+            <p class="text-emerald-400 text-xs">
+              Built by <a href="https://aashutoshkhatiwada.com.np/" target="_blank" rel="noreferrer" class="text-white hover:underline">Aashutosh Khatiwada</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ✅ FIXED: Updated EmailJS SDK to correct CDN URL -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

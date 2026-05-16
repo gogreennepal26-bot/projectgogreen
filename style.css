@@ -1,0 +1,149 @@
+:root {
+  --emerald-main: #10b981;
+  --emerald-dark: #064e3b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Smooth Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Professional Gradient Text */
+.grad-text {
+  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Ultra-Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(16, 185, 129, 0.12);
+}
+
+/* Organic blob background */
+.hero-blob {
+  position: absolute;
+  border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
+  filter: blur(70px);
+  opacity: 0.32;
+  pointer-events: none;
+  animation: morph 10s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 60% 40% 70% 30% / 40% 60% 40% 60%;
+  }
+  50% {
+    border-radius: 30% 70% 40% 60% / 60% 30% 70% 40%;
+  }
+}
+
+/* Floating effects */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float,
+.float-ring {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Modern Hover Effects for Buttons */
+.btn-hover-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hover-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-hover-effect:hover::after {
+  width: 300%;
+  height: 300%;
+}
+
+/* Custom Selection Color */
+::selection {
+  background: var(--emerald-main);
+  color: white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--emerald-main);
+  border-radius: 999px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #022c22;
+}
+
+/* Dark mode fix: keep SVG logo visible/bright */
+.dark img[src="logo.svg"] {
+  filter: brightness(1.4) saturate(1.2) contrast(1.1);
+}
+
+/* Smooth mobile menu animation */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.35s ease-out forwards;
+}
