@@ -11,6 +11,78 @@ body {
   overflow-x: hidden;
 }
 
+.site-loader {
+  opacity: 1;
+  visibility: visible;
+}
+
+.faq-item {
+  background: white;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+.faq-item summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item .faq-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  margin-top: 1rem;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.site-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.animate-spin-slow {
+  animation: spin 6s linear infinite;
+}
+
+.loader-bar {
+  animation: loader-fill 2.8s ease-in-out infinite;
+}
+
+@keyframes loader-fill {
+  0%, 100% {
+    width: 0%;
+  }
+  50% {
+    width: 95%;
+  }
+}
+
 /* Smooth Reveal Animation */
 .reveal {
   opacity: 0;
@@ -37,11 +109,6 @@ body {
   backdrop-filter: blur(18px) saturate(180%);
   -webkit-backdrop-filter: blur(18px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.16);
-}
-
-.dark .glass {
-  background: rgba(15, 23, 42, 0.88);
-  border: 1px solid rgba(16, 185, 129, 0.12);
 }
 
 /* Organic blob background */
@@ -122,15 +189,37 @@ body {
   border-radius: 999px;
 }
 
-.dark ::-webkit-scrollbar-track {
-  background: #022c22;
+.ceo-avatar {
+  position: relative;
+  display: inline-flex;
 }
 
-/* Dark mode fix: keep SVG logo visible/bright */
-.dark img[src="logo.svg"] {
-  filter: brightness(1.4) saturate(1.2) contrast(1.1);
+.ceo-avatar > div {
+  position: relative;
+  z-index: 1;
 }
 
+.ceo-avatar::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 18px);
+  height: calc(100% + 18px);
+  transform: translate(-50%, -50%) rotate(0deg);
+  border-radius: 9999px;
+  border: 2px dotted rgba(34,197,94,0.95);
+  box-shadow: 0 0 18px rgba(34,197,94,0.35), inset 0 0 10px rgba(16,185,129,0.35);
+  mix-blend-mode: screen;
+  box-sizing: border-box;
+  animation: ceo-avatar-ring 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes ceo-avatar-ring {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);  
+  }}
 /* Smooth mobile menu animation */
 
 @keyframes fade-in {
@@ -145,5 +234,5 @@ body {
 }
 
 .animate-fade-in {
-  animation: fade-in 0.35s ease-out forwards;
+  animation: fade-in 0.9s ease-out forwards;
 }

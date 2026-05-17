@@ -14,24 +14,15 @@ const initEmailJS = () => {
   }
 };
 
-const updateThemeIcon = () => {
-  const icon = document.getElementById('themeIcon');
-  if (!icon) return;
-  icon.className = document.documentElement.classList.contains('dark')
-    ? 'fa-solid fa-moon'
-    : 'fa-solid fa-sun';
+const hideLoader = () => {
+  const loader = document.getElementById('siteLoader');
+  if (!loader) return;
+  loader.classList.add('loaded');
+  setTimeout(() => {
+    if (loader.parentNode) loader.parentNode.removeChild(loader);
+  }, 600);
 };
 
-const initTheme = () => {
-  const storedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-    document.documentElement.classList.add('dark');
-  }
-
-  updateThemeIcon();
-};
 
 const showToast = (message, type = 'success') => {
   let container = document.getElementById(toastContainerId);
@@ -73,12 +64,6 @@ const showToast = (message, type = 'success') => {
     toast.style.transform = 'translateY(10px)';
     setTimeout(() => container.removeChild(toast), 250);
   }, 3600);
-};
-
-const toggleTheme = () => {
-  const isDark = document.documentElement.classList.toggle('dark');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  updateThemeIcon();
 };
 
 const initMobileMenu = () => {
@@ -162,12 +147,10 @@ const handleNavbarScroll = () => {
   const isScrolled = window.scrollY > 60;
   nav.classList.toggle('py-2', isScrolled);
   panel.classList.toggle('bg-white/80', isScrolled);
-  panel.classList.toggle('dark:bg-gray-950/80', isScrolled);
 };
 
 window.addEventListener('DOMContentLoaded', () => {
   initEmailJS();
-  initTheme();
   initMobileMenu();
   initRevealObserver();
 
@@ -176,11 +159,9 @@ window.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', handleContactSubmit);
   }
 
-  const themeBtn = document.getElementById('themeBtn');
-  if (themeBtn) {
-    themeBtn.addEventListener('click', toggleTheme);
-  }
-
   window.addEventListener('scroll', handleNavbarScroll);
   handleNavbarScroll();
 });
+
+window.addEventListener('load', hideLoader);
+document.getElementById("year").textContent = new Date().getFullYear();

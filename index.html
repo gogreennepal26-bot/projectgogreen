@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Go Green Nepal | Sustainable Organic Solutions</title>
     <meta name="description" content="Harnessing Nepal's soil for organic solutions. Healthy Soil, Healthy Food, Healthy Water." />
+    <script>
+      tailwind.config = {
+        darkMode: false,
+      };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="favico.png" type="image/png" />
     <link
@@ -16,13 +21,32 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <!-- ✅ FIXED: Removed stray </style> tag that had no opening <style> -->
   </head>
 
   <body
     class="bg-slate-50 dark:bg-gray-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-500 overflow-x-hidden"
   >
-    <!-- ══════════════════════════════════════ NAVBAR ══════════════════════════════════════ -->
+    <div id="siteLoader" class="site-loader fixed inset-0 z-[9999] flex items-center justify-center bg-white/95 transition-all duration-500">
+      <div class="relative z-10 max-w-xs w-full rounded-[2rem] border border-slate-200/70 bg-white shadow-[0_40px_90px_rgba(15,23,42,0.08)] p-8 text-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-200/30 via-transparent to-white/70"></div>
+        <div class="relative flex flex-col items-center gap-6">
+          <div class="relative w-28 h-28 rounded-full bg-slate-100 border border-emerald-400/40 flex items-center justify-center shadow-xl">
+            <img src="logo.svg" alt="GoGreen Nepal logo" class="w-16 h-16 object-contain" />
+            <span class="absolute inset-0 rounded-full border border-dashed border-emerald-500/80 animate-spin-slow"></span>
+          </div>
+          <div>
+            <p class="text-2xl font-bold tracking-[0.2em] text-slate-900 uppercase">Go Green</p>
+            <p class="text-xs text-emerald-700 uppercase tracking-[0.34em] mt-2">Nepal</p>
+          </div>
+          <div class="space-y-3 w-full">
+            <p class="text-sm text-slate-500">Loading your sustainable experience…</p>
+            <div class="h-2 w-full rounded-full bg-slate-200 overflow-hidden">
+              <div class="loader-bar h-full rounded-full bg-emerald-500"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
       <div class="max-w-7xl mx-auto px-4 md:px-8">
         <div class="glass rounded-2xl shadow-xl px-6 py-2 flex items-center justify-between border border-white/20 dark:border-emerald-500/20">
@@ -34,13 +58,11 @@
             <a href="#pillars" class="hover:text-emerald-600 transition-colors">Mission</a>
             <a href="#ceo" class="hover:text-emerald-600 transition-colors">About</a>
             <a href="#product" class="hover:text-emerald-600 transition-colors">Innovation</a>
+            <a href="faq.html" class="hover:text-emerald-600 transition-colors">FAQ</a>
             <a href="#contact" class="hover:text-emerald-600 transition-colors">Contact</a>
           </div>
 
           <div class="flex items-center gap-4">
-            <button id="themeBtn" aria-label="Toggle dark mode" class="p-2 rounded-xl bg-slate-100 dark:bg-gray-800 text-emerald-600 transition-all hover:scale-110">
-              <i id="themeIcon" class="fa-solid fa-sun text-lg"></i>
-            </button>
             <a href="#contact" class="btn-hover-effect hidden sm:block bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-emerald-500/30 transition-all active:scale-95">
               Get Started
             </a>
@@ -53,15 +75,14 @@
         <a href="#pillars" class="text-lg font-medium border-b border-emerald-500/10 pb-2">Our Mission</a>
         <a href="#ceo" class="text-lg font-medium border-b border-emerald-500/10 pb-2">About</a>
         <a href="#product" class="text-lg font-medium border-b border-emerald-500/10 pb-2">Products</a>
+        <a href="faq.html" class="text-lg font-medium border-b border-emerald-500/10 pb-2">FAQ</a>
         <a href="#contact" class="bg-emerald-600 text-white text-center py-3 rounded-xl">Get Started</a>
       </div>
     </nav>
 
-    <!-- ══════════════════════════════════════ HERO — SPLIT SCREEN ══════════════════════════════════════ -->
     <section
       class="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16 px-6 md:px-16"
     >
-      <!-- Background blobs -->
       <div
         class="hero-blob w-96 h-96 bg-emerald-400 top-10 -left-20"
       ></div>
@@ -77,9 +98,6 @@
       <div
         class="relative z-10 max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center gap-12"
       >
-        <!-- ✅ FIXED: Removed stray "text" node that was here -->
-
-        <!-- Left: Copy -->
         <div class="flex-1 text-center md:text-left">
           <span
             class="inline-block bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 reveal"
@@ -116,7 +134,6 @@
             </a>
           </div>
 
-          <!-- Stats strip -->
           <div
             class="flex gap-8 mt-12 justify-center md:justify-start reveal"
           >
@@ -128,15 +145,7 @@
                 Years of Research
               </p>
             </div>
-            <div class="w-px bg-slate-200 dark:bg-slate-700"></div>
-            <div>
-              <p class="font-serif text-3xl font-bold text-emerald-600">12</p>
-              <p
-                class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wide"
-              >
-                Districts Reached
-              </p>
-            </div>
+
             <div class="w-px bg-slate-200 dark:bg-slate-700"></div>
             <div>
               <p class="font-serif text-3xl font-bold text-emerald-600">
@@ -151,7 +160,6 @@
           </div>
         </div>
 
-        <!-- Right: Floating visual -->
         <div class="flex-1 flex items-center justify-center reveal">
           <div class="relative w-full max-w-xl">
             <div class="relative overflow-hidden rounded-[2.5rem] shadow-[0_40px_80px_rgba(4,120,87,0.18)]">
@@ -183,14 +191,11 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════ THREE PILLARS — BENTO GRID ══════════════════════════════════════ -->
     <section
       id="pillars"
       class="py-24 px-6 md:px-16 bg-white dark:bg-gray-900 transition-colors duration-500"
     >
       <div class="max-w-6xl mx-auto">
-        <!-- ✅ FIXED: Removed stray "text" node that was here -->
-
         <div class="text-center mb-16 reveal">
           <span
             class="inline-block text-emerald-500 text-xs font-semibold tracking-widest uppercase mb-3"
@@ -209,9 +214,8 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Card 1 -->
           <div
-            class="reveal group glass rounded-3xl p-8 shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default border border-emerald-100 dark:border-emerald-900/50 bg-gradient-to-br from-amber-50 to-emerald-50 dark:from-emerald-950/60 dark:to-gray-900/80"
+            class="reveal group glass rounded-3xl p-8 shadow-2xl hover:-translate-y-2 group-hover:scale-[1.02] transform-gpu transition-all duration-500 cursor-default border border-emerald-100 dark:border-emerald-900/50 bg-gradient-to-br from-amber-50 to-emerald-50 dark:from-emerald-950/60 dark:to-gray-900/80"
           >
             <div
               class="w-14 h-14 rounded-2xl bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
@@ -230,17 +234,16 @@
               mycorrhizal inoculants, turning degraded land into thriving,
               fertile ground.
             </p>
-            <div
-              class="mt-6 flex items-center gap-2 text-amber-600 dark:text-amber-400 text-sm font-semibold group-hover:gap-3 transition-all duration-300"
-            >
-              Learn more <i class="fa-solid fa-arrow-right text-xs"></i>
+            <div class="overflow-hidden max-h-0 opacity-0 translate-y-4 transition-all duration-500 ease-out group-hover:max-h-40 group-hover:opacity-100 group-hover:translate-y-0">
+              <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Soil health metrics: +32% organic matter, 48% more microbial
+                activity, and better moisture retention across 60+ farm plots.
+              </p>
             </div>
           </div>
 
-          <!-- Card 2 (Featured) -->
-          <!-- ✅ FIXED: Added "relative" class so the absolute dot renders correctly -->
           <div
-            class="reveal relative group rounded-3xl p-8 shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default bg-gradient-to-br from-emerald-600 to-emerald-900 border border-emerald-500/30"
+            class="reveal relative group rounded-3xl p-8 shadow-2xl hover:-translate-y-2 group-hover:scale-[1.02] transform-gpu transition-all duration-500 cursor-default bg-gradient-to-br from-emerald-600 to-emerald-900 border border-emerald-500/30"
           >
             <div
               class="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
@@ -255,20 +258,19 @@
               with integrity — from seed selection to harvest, every step is
               traceable.
             </p>
-            <div
-              class="mt-6 flex items-center gap-2 text-emerald-200 text-sm font-semibold group-hover:gap-3 transition-all duration-300"
-            >
-              Learn more <i class="fa-solid fa-arrow-right text-xs"></i>
+            <div class="overflow-hidden max-h-0 opacity-0 translate-y-4 transition-all duration-500 ease-out group-hover:max-h-40 group-hover:opacity-100 group-hover:translate-y-0">
+              <p class="mt-4 text-emerald-200 text-sm leading-relaxed">
+                Food impact stats: 35% higher crop nutrition, 42% less
+                chemical input, and improved local harvest yields for small farms.
+              </p>
             </div>
-            <!-- Decorative dot -->
             <div
               class="absolute top-6 right-6 w-3 h-3 rounded-full bg-lime-400 animate-pulse"
             ></div>
           </div>
 
-          <!-- Card 3 -->
           <div
-            class="reveal group glass rounded-3xl p-8 shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default border border-blue-100 dark:border-blue-900/40 bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-950/40 dark:to-gray-900/80"
+            class="reveal group glass rounded-3xl p-8 shadow-2xl hover:-translate-y-2 group-hover:scale-[1.02] transform-gpu transition-all duration-500 cursor-default border border-blue-100 dark:border-blue-900/40 bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-950/40 dark:to-gray-900/80"
           >
             <div
               class="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
@@ -287,17 +289,17 @@
               runoff and building organic buffer zones around rivers, lakes, and
               springs.
             </p>
-            <div
-              class="mt-6 flex items-center gap-2 text-blue-500 dark:text-blue-400 text-sm font-semibold group-hover:gap-3 transition-all duration-300"
-            >
-              Learn more <i class="fa-solid fa-arrow-right text-xs"></i>
+            <div class="overflow-hidden max-h-0 opacity-0 translate-y-4 transition-all duration-500 ease-out group-hover:max-h-40 group-hover:opacity-100 group-hover:translate-y-0">
+              <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Water health stats: 60% runoff reduction, cleaner stream flow,
+                and restored native aquatic habitat along hillside watersheds.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════ CEO SPOTLIGHT ══════════════════════════════════════ -->
     <section
       id="ceo"
       class="py-24 px-6 md:px-16 bg-slate-50 dark:bg-gray-950 transition-colors duration-500"
@@ -307,16 +309,15 @@
           class="rounded-3xl bg-white dark:bg-gray-900 shadow-2xl border-l-4 border-emerald-500 overflow-hidden"
         >
           <div class="flex flex-col md:flex-row">
-            <!-- ✅ FIXED: Removed stray "text" node that was here -->
-
-            <!-- Left accent panel -->
             <div
               class="md:w-64 bg-gradient-to-br from-emerald-600 to-emerald-900 flex flex-col items-center justify-center p-10 gap-4"
             >
-              <div
-                class="w-24 h-24 rounded-full overflow-hidden bg-white/20 flex items-center justify-center shadow-xl"
-              >
-                <img src="ceo.png" alt="Baburam Niroula" class="w-full h-full object-cover" />
+              <div class="ceo-avatar relative">
+                <div
+                  class="w-24 h-24 rounded-full overflow-hidden bg-white/20 flex items-center justify-center shadow-xl"
+                >
+                  <img src="ceo.png" alt="Baburam Niroula" class="w-full h-full object-cover" />
+                </div>
               </div>
               <div class="text-center">
                  <p
@@ -335,21 +336,16 @@
               </div>
               <div class="flex gap-3 mt-2">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61580581149653"
+                  target="_blank"
+                  rel="noreferrer noopener"
                   class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
                 >
-                  <i class="fa-brands fa-linkedin-in text-xs"></i>
-                </a>
-                <a
-                  href="#"
-                  class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-                >
-                  <i class="fa-brands fa-twitter text-xs"></i>
+                  <i class="fa-brands fa-facebook-f text-xs"></i>
                 </a>
               </div>
             </div>
 
-            <!-- Quote -->
             <div
               class="flex-1 p-10 md:p-14 flex flex-col justify-center"
             >
@@ -373,7 +369,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════ PRODUCT TEASER — ORGANIC SHIELD ══════════════════════════════════════ -->
     <section
       id="product"
       class="py-24 px-6 md:px-16 bg-white dark:bg-gray-900 transition-colors duration-500"
@@ -518,14 +513,11 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════ CONTACT FORM ══════════════════════════════════════ -->
     <section
       id="contact"
       class="py-24 px-6 md:px-16 bg-slate-50 dark:bg-gray-950 transition-colors duration-500"
     >
       <div class="max-w-xl mx-auto reveal">
-        <!-- ✅ FIXED: Removed stray "text" node that was here -->
-
         <div class="text-center mb-10">
           <span
             class="inline-block text-emerald-500 text-xs font-semibold tracking-widest uppercase mb-3"
@@ -574,7 +566,7 @@
                 <p class="font-semibold text-slate-800 dark:text-white">
                   Location
                 </p>
-                <p>Biratchwok, Nepal</p>
+                <p>Biratchowk, Nepal</p>
               </div>
             </div>
           </div>
@@ -667,7 +659,6 @@
             </button>
           </form>
 
-          <!-- Success message -->
           <div
             id="successMsg"
             class="hidden mt-6 text-center py-4 px-6 bg-emerald-50 dark:bg-emerald-900/30 rounded-2xl border border-emerald-200 dark:border-emerald-800"
@@ -685,14 +676,11 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════ FOOTER ══════════════════════════════════════ -->
     <footer class="bg-emerald-950 text-emerald-100 py-12 px-6 md:px-16">
       <div class="max-w-6xl mx-auto">
         <div
           class="flex flex-col md:flex-row justify-between items-start gap-8 mb-10"
         >
-          <!-- ✅ FIXED: Removed stray "text" node that was here -->
-
           <div class="max-w-xs">
             <div class="flex items-center gap-2 mb-4">
               <span
@@ -792,7 +780,7 @@
           class="border-t border-emerald-900 pt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
         >
           <div class="flex flex-col sm:flex-row sm:items-center gap-3 text-emerald-500 text-xs">
-            <p>© 2025 Go Green Nepal. All rights reserved.</p>
+            <p>© <span id="year"></span> Go Green Nepal. All rights reserved.</p>
             <div class="flex items-center gap-1">
               <i class="fa-solid fa-map-pin text-emerald-400"></i>
               Biratchowk, Nepal
@@ -801,10 +789,10 @@
 
           <div class="flex flex-col sm:flex-row sm:items-center gap-4">
             <div class="flex items-center gap-3">
-              <a href="https://facebook.com/GoGreenNepal" target="_blank" rel="noreferrer" class="text-emerald-300 hover:text-white transition-colors" aria-label="GoGreen Nepal Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61589541522965" target="_blank" rel="noreferrer" class="text-emerald-300 hover:text-white transition-colors" aria-label="GoGreen Nepal Facebook">
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="https://instagram.com/GoGreenNepal" target="_blank" rel="noreferrer" class="text-emerald-300 hover:text-white transition-colors" aria-label="GoGreen Nepal Instagram">
+              <a href="https://instagram.com/GoGreenNepal26" target="_blank" rel="noreferrer" class="text-emerald-300 hover:text-white transition-colors" aria-label="GoGreen Nepal Instagram">
                 <i class="fa-brands fa-instagram"></i>
               </a>
               <a href="https://youtube.com/@GoGreenNepal26" target="_blank" rel="noreferrer" class="text-emerald-300 hover:text-white transition-colors" aria-label="GoGreen Nepal YouTube">
@@ -812,14 +800,13 @@
               </a>
             </div>
             <p class="text-emerald-400 text-xs">
-              Built by <a href="https://aashutoshkhatiwada.com.np/" target="_blank" rel="noreferrer" class="text-white hover:underline">Aashutosh Khatiwada</a>
+              Built by <a href="https://aashutoshkhatiwada.com.np/" target="_blank" class="text-white hover:underline">Aashutosh Khatiwada</a>
             </p>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- ✅ FIXED: Updated EmailJS SDK to correct CDN URL -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
